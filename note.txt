@@ -1,0 +1,81 @@
+server explaination: client - internet - server - computer browser(client)
+when we type in the google and search the info, it will goes to the internet, 
+take this infomation and send it to the server, after get the data, it will
+give to client
+-----------------------------------------------------------------------------
+STEP 1: INITIALIZE FILE
+1. create file:
+
+server.js
+
+2. pick programming language (Java/Phyton/GoLand/...):
+
+javascript & node.js(installed)
+
+3. terminal: install 
+
+> npm init (generate package.json)
+> maal server
+> maal-server
+> 1.0.0
+> project to learn nodejs
+> server.js(entry point is our main file)
+> learn server nodejs
+> keyword: start
+> Adelia Febriani
+> MIT
+> yes
+
+4. copy and remove the package.json
+5. npm init
+6. npm run test~start
+    "start": "node server.js", // it will called this page when to start the server
+
+7. npm run make (generate src) ~ rm -rf src
+8. click git bash to run $npm run make
+-----------------------------------------------------------------------------
+STEP 2: 
+
+1. create index.js
+
+YOU ALREADY SUCCESSFULLY CREATE A SERVER
+-----------------------------------------------------------------------------
+9/8/2024
+
+CREATE MODULE FILE: example.js, first, create book
+-----------------------------------------------------------------------------
+14/8/2024
+
+node.js, only 1 person create the ethers.js
+
+eventLoop=manage all this store, the works
+
+text=> heavy work => c++ => system panel => osystem => result can be error/data
+
+CREATE: EVENTlOOP.md
+
+Operation system of 1 cycle, and path module and fs module.
+-----------------------------------------------------------------------------
+16/8/2024
+
+yarn add express
+go to index.js
+create app.js
+
+yarn add dotenv
+
+CREATE ROUTING
+-know the type of routing that we want
+
+CREATE folder CALLED public
+index.html
+
+-----------------------------------------------------------------------------
+21/8/2024
+
+blog>homepage>endpoint>other endpoint>single blog>user>profile>upload your profile
+
+database>authentication>
+
+create folder call blog
+-----------------------------------------------------------------------------

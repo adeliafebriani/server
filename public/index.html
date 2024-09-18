@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+</head>
+<body>
+    <h1>Welcome to the Book <emoji>📚</emoji></h1>
+    
+    <button id="bookListButton">Book List</button>
+    <ul id="bookList"></ul>   
+
+    <br />
+    <form id="createBookForm">
+        <input type="text" id="bookNameInput" placeholder="Enter book name" required>
+        <button type="submit">Create Book</button>
+    </form>
+
+    <script>
+        document.getElementById('bookListButton').addEventListener('click', () => {
+            fetch('/bookList')
+                .then(response => response.json())
+                .then(books => {
+                    const bookList = document.getElementById('bookList');
+                    bookList.innerHTML = ''; 
+
+                    books.forEach(book => {
+                        const listItem = document.createElement('li');
+                        listItem.textContent = book;
+                        bookList.appendChild(listItem);
+                    });
+                })
+                .catch(error => console.error('Error fetching book list:', error));
+        });
+
+        document.getElementById('createBookForm').addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const bookName = document.getElementById('bookNameInput').value;
+
+            fetch('/createBook', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: new URLSearchParams({ bookName })
+            })
+            .then(response => response.text())
+            .then(message => {
+                alert(message); 
+                document.getElementById('bookNameInput').value = ''; 
+            })
+            .catch(error => console.error('Error creating book:', error));
+        });
+    </script>
+</body>
+</html>
